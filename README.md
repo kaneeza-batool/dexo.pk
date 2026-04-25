@@ -56,7 +56,6 @@ dexo.pk/
 - **No backend** — cart uses localStorage, forms show toast confirmations only
 - **No real auth** — login/signup forms simulate success with a redirect
 - **No payment gateway** — payment method selection is UI-only
-- `product.html` (product detail page) is linked but not included in this release
 
 ---
 
