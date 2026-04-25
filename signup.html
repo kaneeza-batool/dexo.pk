@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account — dexo.pk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .perk-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 14px;
+      }
+      .perk-row i {
+        color: var(--gold);
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+      .password-strength {
+        height: 4px;
+        border-radius: 2px;
+        margin-top: 6px;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="auth-wrap"
+      style="
+        background: linear-gradient(135deg, #f8f5f0 0%, #f0e8d8 100%);
+        align-items: stretch;
+        padding: 0;
+      "
+    >
+      <div class="container-fluid h-100">
+        <div class="row min-vh-100">
+          <!-- Left Panel — Brand / Perks -->
+          <div
+            class="col-lg-5 d-none d-lg-flex flex-column justify-content-center"
+            style="
+              background: linear-gradient(
+                135deg,
+                #2a2018 0%,
+                #3d2f20 50%,
+                #4a3828 100%
+              );
+              padding: 60px 50px;
+              position: relative;
+              overflow: hidden;
+            "
+          >
+            <!-- Decorative elements -->
+            <div
+              style="
+                position: absolute;
+                top: -100px;
+                right: -80px;
+                width: 350px;
+                height: 350px;
+                border: 1px solid rgba(200, 169, 106, 0.15);
+                border-radius: 50%;
+              "
+            ></div>
+            <div
+              style="
+                position: absolute;
+                bottom: -80px;
+                left: -60px;
+                width: 250px;
+                height: 250px;
+                border: 1px solid rgba(200, 169, 106, 0.1);
+                border-radius: 50%;
+              "
+            ></div>
+
+            <a
+              href="index.html"
+              style="
+                display: inline-block;
+                margin-bottom: 50px;
+                font-family: &quot;Playfair Display&quot;, serif;
+                font-size: 28px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                background: linear-gradient(135deg, #e0c98a, #c8a96a);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+              "
+              >dexo.pk</a
+            >
+
+            <h2
+              style="
+                color: white;
+                font-size: 38px;
+                line-height: 1.2;
+                margin-bottom: 12px;
+              "
+            >
+              Join Pakistan's Premier Decor Community
+            </h2>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.9;
+                margin-bottom: 40px;
+              "
+            >
+              Create your account today and transform your home with curated
+              luxury pieces.
+            </p>
+
+            <div>
+              <div class="perk-row">
+                <i class="bi bi-gift"></i> Welcome discount on your first order
+              </div>
+              <div class="perk-row">
+                <i class="bi bi-heart"></i> Save favourites to your wishlist
+              </div>
+              <div class="perk-row">
+                <i class="bi bi-clock-history"></i> Track orders in real time
+              </div>
+              <div class="perk-row">
+                <i class="bi bi-star"></i> Early access to new arrivals & sales
+              </div>
+              <div class="perk-row">
+                <i class="bi bi-tags"></i> Exclusive member-only pricing
+              </div>
+              <div class="perk-row">
+                <i class="bi bi-arrow-counterclockwise"></i> Faster checkout &
+                easy returns
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 50px;
+                padding-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="display: flex">
+                  <div
+                    style="
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 50%;
+                      background: linear-gradient(135deg, #e0c98a, #c8a96a);
+                      border: 2px solid #2a2018;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-weight: 700;
+                      font-size: 13px;
+                      color: white;
+                    "
+                  >
+                    A
+                  </div>
+                  <div
+                    style="
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 50%;
+                      background: linear-gradient(135deg, #c8a96a, #a8874a);
+                      border: 2px solid #2a2018;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-weight: 700;
+                      font-size: 13px;
+                      color: white;
+                      margin-left: -10px;
+                    "
+                  >
+                    S
+                  </div>
+                  <div
+                    style="
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 50%;
+                      background: linear-gradient(135deg, #a8874a, #886030);
+                      border: 2px solid #2a2018;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-weight: 700;
+                      font-size: 13px;
+                      color: white;
+                      margin-left: -10px;
+                    "
+                  >
+                    R
+                  </div>
+                </div>
+                <div style="font-size: 12px; color: rgba(255, 255, 255, 0.5)">
+                  <span style="color: white; font-weight: 600">10,000+</span>
+                  happy customers already joined
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel — Form -->
+          <div
+            class="col-lg-7 d-flex align-items-center justify-content-center"
+            style="
+              padding: 60px 30px;
+              background: linear-gradient(135deg, #f8f5f0, #f0e8d8);
+            "
+          >
+            <div style="width: 100%; max-width: 480px">
+              <!-- Mobile logo -->
+              <div class="d-lg-none text-center mb-5">
+                <a
+                  href="index.html"
+                  style="
+                    font-family: &quot;Playfair Display&quot;, serif;
+                    font-size: 28px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #e0c98a,
+                      #c8a96a,
+                      #a8874a
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                  "
+                  >dexo.pk</a
+                >
+              </div>
+
+              <h3 style="font-size: 30px; margin-bottom: 6px">
+                Create Account
+              </h3>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 14px;
+                  font-weight: 300;
+                  margin-bottom: 32px;
+                "
+              >
+                Join us and start beautifying your space today.
+              </p>
+
+              <!-- Social Signup -->
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                  padding: 12px 20px;
+                  border: 1.5px solid var(--border);
+                  border-radius: 50px;
+                  font-family: &quot;Poppins&quot;, sans-serif;
+                  font-size: 13px;
+                  font-weight: 500;
+                  color: var(--text);
+                  background: white;
+                  cursor: pointer;
+                  transition: 0.3s;
+                  width: 100%;
+                  margin-bottom: 24px;
+                "
+                onmouseover="this.style.borderColor = 'var(--gold)'"
+                onmouseout="this.style.borderColor = 'var(--border)'"
+              >
+                <svg width="18" height="18" viewBox="0 0 48 48">
+                  <path
+                    fill="#EA4335"
+                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                  />
+                  <path
+                    fill="#4285F4"
+                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                  />
+                </svg>
+                Sign up with Google
+              </button>
+
+              <div class="auth-divider"><span>or sign up with email</span></div>
+
+              <!-- Signup Form -->
+              <form id="signup-form" class="mt-4">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label">First Name</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-person icon"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Aisha"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label">Last Name</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-person icon"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Khan"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Email Address</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-envelope icon"></i>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="aisha@example.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Phone Number</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-telephone icon"></i>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        placeholder="+92 300 0000000"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Password</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-lock icon"></i>
+                      <input
+                        type="password"
+                        id="signup-pass"
+                        class="form-control"
+                        placeholder="Min. 8 characters"
+                        required
+                        oninput="checkStrength(this.value)"
+                      />
+                    </div>
+                    <div
+                      id="strength-bar"
+                      class="password-strength mt-1"
+                      style="width: 0%; background: transparent"
+                    ></div>
+                    <div
+                      id="strength-label"
+                      style="
+                        font-size: 11px;
+                        color: var(--text-muted);
+                        margin-top: 4px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Confirm Password</label>
+                    <div class="input-icon-wrap">
+                      <i class="bi bi-lock-fill icon"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Re-enter password"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label
+                      style="
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        cursor: pointer;
+                        font-size: 13px;
+                        color: var(--text-muted);
+                      "
+                    >
+                      <input
+                        type="checkbox"
+                        style="
+                          accent-color: var(--gold);
+                          width: 14px;
+                          height: 14px;
+                          margin-top: 2px;
+                          flex-shrink: 0;
+                        "
+                        required
+                      />
+                      I agree to dexo.pk's
+                      <a href="#" style="color: var(--gold)"
+                        >Terms of Service</a
+                      >
+                      and
+                      <a href="#" style="color: var(--gold)">Privacy Policy</a>
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <label
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        cursor: pointer;
+                        font-size: 13px;
+                        color: var(--text-muted);
+                      "
+                    >
+                      <input
+                        type="checkbox"
+                        style="
+                          accent-color: var(--gold);
+                          width: 14px;
+                          height: 14px;
+                        "
+                        checked
+                      />
+                      Send me exclusive offers and styling inspiration
+                    </label>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <button
+                      type="submit"
+                      class="btn-gold w-100"
+                      style="
+                        justify-content: center;
+                        padding: 13px;
+                        font-size: 14px;
+                      "
+                    >
+                      <i class="bi bi-person-plus"></i> Create My Account
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div
+                class="text-center mt-4"
+                style="font-size: 13px; color: var(--text-muted)"
+              >
+                Already have an account?
+                <a
+                  href="login.html"
+                  style="color: var(--gold); font-weight: 600"
+                  >Sign in</a
+                >
+              </div>
+
+              <div class="text-center mt-3">
+                <a
+                  href="index.html"
+                  style="font-size: 12px; color: var(--text-muted)"
+                >
+                  <i class="bi bi-arrow-left me-1"></i> Back to dexo.pk
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function checkStrength(val) {
+        const bar = document.getElementById("strength-bar");
+        const label = document.getElementById("strength-label");
+        if (!val) {
+          bar.style.width = "0%";
+          bar.style.background = "transparent";
+          label.textContent = "";
+          return;
+        }
+        let score = 0;
+        if (val.length >= 8) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+        const levels = [
+          { pct: "25%", color: "#e74c3c", text: "Weak" },
+          { pct: "50%", color: "#f39c12", text: "Fair" },
+          { pct: "75%", color: "#3498db", text: "Good" },
+          { pct: "100%", color: "#27ae60", text: "Strong" },
+        ];
+        const l = levels[Math.max(0, score - 1)];
+        bar.style.width = l.pct;
+        bar.style.background = l.color;
+        label.textContent = `Password strength: ${l.text}`;
+        label.style.color = l.color;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — dexo.pk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--gold-light),
+          var(--gold),
+          transparent
+        );
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -36px;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--gold);
+        border: 3px solid var(--bg);
+        box-shadow: 0 0 0 2px var(--gold);
+      }
+      .timeline-year {
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .timeline-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      .timeline-desc {
+        font-size: 13px;
+        color: var(--text-muted);
+        font-weight: 300;
+        line-height: 1.8;
+      }
+      .team-card {
+        text-align: center;
+      }
+      .team-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--gold);
+        margin: 0 auto 16px;
+      }
+      .team-name {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .team-role {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .stat-box {
+        text-align: center;
+        padding: 32px 24px;
+        background: white;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+      }
+      .stat-box:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow);
+        border-color: rgba(200, 169, 106, 0.3);
+      }
+      .stat-num {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">dexo<span>.pk</span></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list" style="font-size: 24px; color: var(--gold)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="login.html" class="nav-link" style="font-size: 13px"
+              >Sign In</a
+            >
+            <a href="cart.html" class="cart-icon position-relative">
+              <i class="bi bi-bag"></i>
+              <span class="cart-badge cart-count" style="display: none">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="reveal">Our Story</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- BRAND STORY -->
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <div class="about-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80"
+                alt="Dexo Story"
+                class="about-img-main img-fluid"
+                style="border-radius: 20px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1612690669207-fed642192c40?w=300&q=75"
+                alt="Decor Detail"
+                class="about-img-accent"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <div class="overline">Who We Are</div>
+            <h2 style="font-size: 42px; line-height: 1.15; margin-bottom: 20px">
+              Born from a Passion for
+              <em style="font-style: italic; color: var(--gold)"
+                >Beautiful Spaces</em
+              >
+            </h2>
+            <div class="gold-line"></div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.9;
+                margin-top: 20px;
+                font-size: 15px;
+              "
+            >
+              dexo.pk was founded in 2021 by a small team of interior design
+              enthusiasts who believed that every Pakistani home deserved access
+              to world-class decor — without the import prices. We started with
+              a simple Instagram page, sharing our curated finds, and quickly
+              grew into a full-fledged eCommerce brand loved by thousands.
+            </p>
+            <p
+              style="
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.9;
+                font-size: 15px;
+              "
+            >
+              Our name — dexo — is a fusion of "decor" and "expression." We
+              believe your home is an extension of who you are, and every piece
+              you choose tells a chapter of your story. From minimalist Nordic
+              vases to warm ambient lighting, we source and deliver pieces that
+              resonate with modern Pakistani aesthetics.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+              <a href="shop.html" class="btn-gold"
+                ><i class="bi bi-bag"></i> Shop Collection</a
+              >
+              <a href="contact.html" class="btn-outline-gold">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section-alt" style="padding: 70px 0">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3 reveal">
+            <div class="stat-box">
+              <div class="stat-num">10K+</div>
+              <div class="stat-label">Happy Customers</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal reveal-delay-1">
+            <div class="stat-box">
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Curated Products</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal reveal-delay-2">
+            <div class="stat-box">
+              <div class="stat-num">8</div>
+              <div class="stat-label">Categories</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal reveal-delay-3">
+            <div class="stat-box">
+              <div class="stat-num">4.9★</div>
+              <div class="stat-label">Average Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal-left">
+            <div class="overline">What Drives Us</div>
+            <h2 style="font-size: 38px; margin-bottom: 30px">
+              Mission & Vision
+            </h2>
+            <div class="mb-4">
+              <div
+                style="
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 16px;
+                  margin-bottom: 28px;
+                "
+              >
+                <div
+                  style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 12px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(200, 169, 106, 0.12),
+                      rgba(200, 169, 106, 0.04)
+                    );
+                    border: 1px solid rgba(200, 169, 106, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="bi bi-bullseye"
+                    style="color: var(--gold); font-size: 20px"
+                  ></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 18px; margin-bottom: 8px">
+                    Our Mission
+                  </h5>
+                  <p
+                    style="
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      font-size: 14px;
+                      line-height: 1.9;
+                    "
+                  >
+                    To democratize access to premium home decor across Pakistan
+                    — making beautiful living spaces attainable for everyone,
+                    not just the privileged few.
+                  </p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 16px;
+                  margin-bottom: 28px;
+                "
+              >
+                <div
+                  style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 12px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(200, 169, 106, 0.12),
+                      rgba(200, 169, 106, 0.04)
+                    );
+                    border: 1px solid rgba(200, 169, 106, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="bi bi-eye"
+                    style="color: var(--gold); font-size: 20px"
+                  ></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 18px; margin-bottom: 8px">
+                    Our Vision
+                  </h5>
+                  <p
+                    style="
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      font-size: 14px;
+                      line-height: 1.9;
+                    "
+                  >
+                    To become South Asia's most trusted home decor destination —
+                    where quality, aesthetics, and affordability converge to
+                    inspire a generation of home-makers.
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 16px">
+                <div
+                  style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 12px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(200, 169, 106, 0.12),
+                      rgba(200, 169, 106, 0.04)
+                    );
+                    border: 1px solid rgba(200, 169, 106, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="bi bi-heart"
+                    style="color: var(--gold); font-size: 20px"
+                  ></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 18px; margin-bottom: 8px">
+                    Our Promise
+                  </h5>
+                  <p
+                    style="
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      font-size: 14px;
+                      line-height: 1.9;
+                    "
+                  >
+                    Every product we stock is personally reviewed for quality.
+                    If you're not in love with your purchase, we make returns
+                    effortless.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80"
+              alt="Our Vision"
+              style="
+                border-radius: 20px;
+                width: 100%;
+                object-fit: cover;
+                box-shadow: var(--shadow-lg);
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="overline">What We Stand For</div>
+          <h2>Our Core Values</h2>
+          <div class="section-divider center"></div>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="value-icon">✨</div>
+            <h5>Curation</h5>
+            <p>
+              We handpick every single product — no mass-market filler. Only
+              pieces we'd put in our own homes.
+            </p>
+          </div>
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-icon">🤝</div>
+            <h5>Trust</h5>
+            <p>
+              Transparent pricing, honest descriptions, and a return policy that
+              puts you first — always.
+            </p>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-icon">🌿</div>
+            <h5>Sustainability</h5>
+            <p>
+              We prioritize natural, eco-conscious materials and minimal,
+              recyclable packaging.
+            </p>
+          </div>
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-icon">🚀</div>
+            <h5>Innovation</h5>
+            <p>
+              We stay ahead of global decor trends so you can always find
+              something fresh and inspiring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal-left">
+            <div class="overline">How We Got Here</div>
+            <h2 style="font-size: 38px; margin-bottom: 20px">Our Journey</h2>
+            <div class="gold-line"></div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.9;
+                margin-top: 20px;
+                font-size: 15px;
+              "
+            >
+              From a passionate side project to Pakistan's fastest-growing home
+              decor brand — here's a look at the milestones that shaped dexo.pk.
+            </p>
+          </div>
+          <div class="col-lg-7 reveal-right">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2021</div>
+                <h5 class="timeline-title">The Beginning</h5>
+                <p class="timeline-desc">
+                  Founded as an Instagram-based curated decor page with just 5
+                  products and a passion for beautiful homes.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2022</div>
+                <h5 class="timeline-title">Going Online</h5>
+                <p class="timeline-desc">
+                  Launched dexo.pk as a fully operational eCommerce store with
+                  100+ products and nationwide delivery.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2023</div>
+                <h5 class="timeline-title">1,000 Orders Milestone</h5>
+                <p class="timeline-desc">
+                  Reached our 1,000th order milestone, expanded to 8 categories,
+                  and launched the Decor Sets collection.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2024</div>
+                <h5 class="timeline-title">10,000 Happy Homes</h5>
+                <p class="timeline-desc">
+                  Crossed 10,000 customers, introduced loyalty rewards, and
+                  began same-day delivery in Karachi.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2025</div>
+                <h5 class="timeline-title">The Future</h5>
+                <p class="timeline-desc">
+                  Expanding into Furniture & Statement Pieces, launching a
+                  mobile app, and opening our first flagship experience studio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-left">
+            <div
+              class="overline"
+              style="
+                color: rgba(200, 169, 106, 0.6);
+                letter-spacing: 4px;
+                font-size: 11px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              "
+            >
+              Stay Connected
+            </div>
+            <h2 style="font-size: 38px; line-height: 1.2">
+              Join the dexo Community
+            </h2>
+            <p class="mt-3">
+              Get styling tips, exclusive offers, and first access to new
+              arrivals.
+            </p>
+          </div>
+          <div class="col-lg-6 reveal-right">
+            <form class="newsletter-form" id="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="footer-brand">dexo.pk</div>
+            <p class="footer-tagline">
+              Pakistan's premier destination for luxury home decor.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-pinterest"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Shop</h6>
+            <ul>
+              <li><a href="shop.html">All Products</a></li>
+              <li><a href="shop.html">Categories</a></li>
+              <li><a href="shop.html">New Arrivals</a></li>
+              <li><a href="shop.html">Best Sellers</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Help</h6>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6>Contact</h6>
+            <ul>
+              <li>
+                <a href="mailto:hello@dexo.pk"
+                  ><i class="bi bi-envelope me-2"></i>hello@dexo.pk</a
+                >
+              </li>
+              <li>
+                <a href="tel:+923001234567"
+                  ><i class="bi bi-telephone me-2"></i>+92 300 1234567</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-geo-alt me-2"></i>Karachi, Pakistan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2022 dexo.pk — All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

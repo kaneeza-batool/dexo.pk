@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — dexo.pk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .coming-soon-state {
+        display: none;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .coming-soon-state.active {
+        display: block;
+      }
+      .coming-soon-icon {
+        font-size: 64px;
+        margin-bottom: 16px;
+        opacity: 0.4;
+      }
+      .coming-soon-state h3 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text, #333);
+      }
+      .coming-soon-state p {
+        color: var(--text-muted, #888);
+        font-size: 14px;
+      }
+      .coming-soon-badge-pill {
+        display: inline-block;
+        background: #c9a84c22;
+        color: #c9a84c;
+        border: 1px solid #c9a84c55;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        padding: 3px 10px;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+      .filter-check input[disabled] + span,
+      .filter-check.disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+      }
+      #no-results {
+        display: none;
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--text-muted, #888);
+      }
+      #no-results.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">dexo<span>.pk</span></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list" style="font-size: 24px; color: var(--gold)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="login.html" class="nav-link" style="font-size: 13px"
+              >Sign In</a
+            >
+            <a href="cart.html" class="cart-icon position-relative">
+              <i class="bi bi-bag"></i>
+              <span class="cart-badge cart-count" style="display: none">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="reveal">All Products</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Shop</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- SHOP SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- SIDEBAR -->
+          <div class="col-lg-3">
+            <div class="filter-sidebar reveal-left">
+              <div class="filter-title">
+                <i class="bi bi-sliders me-2" style="color: var(--gold)"></i
+                >Filter
+              </div>
+
+              <!-- Categories -->
+              <div class="filter-group">
+                <h6>Categories</h6>
+
+                <!-- ACTIVE categories -->
+                <label class="filter-check">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check"
+                    value="Aesthetic Room Decor"
+                  />
+                  Aesthetic Room Decor
+                  <small class="ms-auto text-muted">(4)</small>
+                </label>
+                <label class="filter-check">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check"
+                    value="Scented Candles"
+                  />
+                  Scented Candles <small class="ms-auto text-muted">(1)</small>
+                </label>
+
+                <!-- COMING SOON categories (disabled) -->
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Lighting & Ambience"
+                    disabled
+                  />
+                  Lighting &amp; Ambience
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Table & Accent Decor"
+                    disabled
+                  />
+                  Table &amp; Accent Decor
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Green & Natural Decor"
+                    disabled
+                  />
+                  Green &amp; Natural Decor
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Soft Furnishings"
+                    disabled
+                  />
+                  Soft Furnishings
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Storage & Organization"
+                    disabled
+                  />
+                  Storage &amp; Organization
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+                <label class="filter-check disabled" title="Coming Soon">
+                  <input
+                    type="checkbox"
+                    class="filter-cat-check coming-soon-cat"
+                    value="Furniture & Statement"
+                    disabled
+                  />
+                  Furniture &amp; Statement
+                  <span class="coming-soon-badge-pill">Soon</span>
+                </label>
+              </div>
+
+              <!-- Price Range -->
+              <div class="filter-group">
+                <h6>Price Range</h6>
+                <div class="price-range">
+                  <input
+                    type="range"
+                    id="price-range"
+                    min="500"
+                    max="10000"
+                    value="10000"
+                    step="100"
+                  />
+                </div>
+                <div class="price-vals">
+                  <span>PKR 500</span>
+                  <span id="price-val">PKR 10,000</span>
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div class="filter-group">
+                <h6>Availability</h6>
+                <label class="filter-check"
+                  ><input type="checkbox" checked /> In Stock</label
+                >
+                <label class="filter-check"
+                  ><input type="checkbox" /> Pre-order</label
+                >
+              </div>
+
+              <button
+                class="btn-outline-gold w-100 mt-2"
+                style="justify-content: center"
+                onclick="resetFilters()"
+              >
+                <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
+              </button>
+            </div>
+          </div>
+
+          <!-- PRODUCTS -->
+          <div class="col-lg-9">
+            <!-- Sort Bar -->
+            <div class="sort-bar reveal">
+              <div class="results-count" id="results-count">
+                Showing <span id="count-num">5</span> products
+              </div>
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <label style="font-size: 13px; color: var(--text-muted)"
+                  >Sort by:</label
+                >
+                <select id="sort-select">
+                  <option value="">Featured</option>
+                  <option value="low">Price: Low to High</option>
+                  <option value="high">Price: High to Low</option>
+                  <option value="new">Newest First</option>
+                </select>
+                <div class="d-flex gap-2">
+                  <button class="action-btn" title="Grid">
+                    <i class="bi bi-grid"></i>
+                  </button>
+                  <button class="action-btn" title="List">
+                    <i class="bi bi-list-ul"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product grid -->
+            <div class="row g-4" id="product-grid">
+              <!-- ── AESTHETIC ROOM DECOR (4 products) ── -->
+              <div
+                class="col-sm-6 col-xl-4 product-card-wrap reveal"
+                data-price="2499"
+                data-cat="Aesthetic Room Decor"
+              >
+                <div class="product-card">
+                  <div class="product-img-wrap">
+                    <img
+                      src="./images/1.jpeg"
+                      alt="Nordic Home Decoration Vase"
+                    />
+                    <span class="product-badge">New</span>
+                    <div class="product-actions">
+                      <a href="product.html" class="action-btn"
+                        ><i class="bi bi-eye"></i
+                      ></a>
+                      <button
+                        class="action-btn"
+                        onclick="
+                          addToCart(
+                            'p1',
+                            'Nordic Home Decoration Vase',
+                            2499,
+                            './images/1.jpeg',
+                            'Aesthetic Room Decor',
+                          )
+                        "
+                      >
+                        <i class="bi bi-bag-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-body">
+                    <div class="product-cat">Aesthetic Room Decor</div>
+                    <h5 class="product-title">
+                      <a href="product.html">Nordic Home Decoration Vase</a>
+                    </h5>
+                    <div class="product-stars">★★★★★ <span>(48)</span></div>
+                    <div class="product-price">
+                      PKR 2,499 <span class="old">PKR 3,200</span>
+                    </div>
+                    <button
+                      class="btn-add-cart mt-3"
+                      onclick="
+                        addToCart(
+                          'p1',
+                          'Nordic Home Decoration Vase',
+                          2499,
+                          './images/1.jpeg',
+                          'Aesthetic Room Decor',
+                        )
+                      "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-sm-6 col-xl-4 product-card-wrap reveal reveal-delay-1"
+                data-price="1899"
+                data-cat="Aesthetic Room Decor"
+              >
+                <div class="product-card">
+                  <div class="product-img-wrap">
+                    <img src="./images/2.jpeg" alt="Frameless DIY Wall Clock" />
+                    <span class="product-badge">Best Seller</span>
+                    <div class="product-actions">
+                      <a href="product.html" class="action-btn"
+                        ><i class="bi bi-eye"></i
+                      ></a>
+                      <button
+                        class="action-btn"
+                        onclick="
+                          addToCart(
+                            'p2',
+                            'Frameless DIY Wall Clock',
+                            1899,
+                            './images/2.jpeg',
+                            'Aesthetic Room Decor',
+                          )
+                        "
+                      >
+                        <i class="bi bi-bag-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-body">
+                    <div class="product-cat">Aesthetic Room Decor</div>
+                    <h5 class="product-title">
+                      <a href="product.html">Frameless DIY Wall Clock</a>
+                    </h5>
+                    <div class="product-stars">★★★★★ <span>(112)</span></div>
+                    <div class="product-price">
+                      PKR 1,899 <span class="old">PKR 2,500</span>
+                    </div>
+                    <button
+                      class="btn-add-cart mt-3"
+                      onclick="
+                        addToCart(
+                          'p2',
+                          'Frameless DIY Wall Clock',
+                          1899,
+                          './images/2.jpeg',
+                          'Aesthetic Room Decor',
+                        )
+                      "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-sm-6 col-xl-4 product-card-wrap reveal reveal-delay-2"
+                data-price="3200"
+                data-cat="Aesthetic Room Decor"
+              >
+                <div class="product-card">
+                  <div class="product-img-wrap">
+                    <img
+                      src="./images/3.png"
+                      alt="Flower Green Leaf String Lights"
+                    />
+                    <div class="product-actions">
+                      <a href="product.html" class="action-btn"
+                        ><i class="bi bi-eye"></i
+                      ></a>
+                      <button
+                        class="action-btn"
+                        onclick="
+                          addToCart(
+                            'p3',
+                            'Flower Green Leaf String Lights',
+                            3200,
+                            './images/3.png',
+                            'Aesthetic Room Decor',
+                          )
+                        "
+                      >
+                        <i class="bi bi-bag-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-body">
+                    <div class="product-cat">Aesthetic Room Decor</div>
+                    <h5 class="product-title">
+                      <a href="product.html">Flower Green Leaf String Lights</a>
+                    </h5>
+                    <div class="product-stars">★★★★☆ <span>(76)</span></div>
+                    <div class="product-price">PKR 3,200</div>
+                    <button
+                      class="btn-add-cart mt-3"
+                      onclick="
+                        addToCart(
+                          'p3',
+                          'Flower Green Leaf String Lights',
+                          3200,
+                          './images/3.png',
+                          'Aesthetic Room Decor',
+                        )
+                      "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-sm-6 col-xl-4 product-card-wrap reveal"
+                data-price="4500"
+                data-cat="Aesthetic Room Decor"
+              >
+                <div class="product-card">
+                  <div class="product-img-wrap">
+                    <img
+                      src="./images/4.png"
+                      alt="Charcoal Burnt Corner Shelf"
+                    />
+                    <div class="product-actions">
+                      <a href="product.html" class="action-btn"
+                        ><i class="bi bi-eye"></i
+                      ></a>
+                      <button
+                        class="action-btn"
+                        onclick="
+                          addToCart(
+                            'p4',
+                            'Luxury Charcoal Burnt Corner Shelf',
+                            4500,
+                            './images/4.png',
+                            'Aesthetic Room Decor',
+                          )
+                        "
+                      >
+                        <i class="bi bi-bag-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-body">
+                    <div class="product-cat">Aesthetic Room Decor</div>
+                    <h5 class="product-title">
+                      <a href="product.html"
+                        >Luxury Charcoal Burnt Corner Shelf</a
+                      >
+                    </h5>
+                    <div class="product-stars">★★★★★ <span>(31)</span></div>
+                    <div class="product-price">
+                      PKR 4,500 <span class="old">PKR 6,200</span>
+                    </div>
+                    <button
+                      class="btn-add-cart mt-3"
+                      onclick="
+                        addToCart(
+                          'p4',
+                          'Luxury Charcoal Burnt Corner Shelf',
+                          4500,
+                          './images/4.png',
+                          'Aesthetic Room Decor',
+                        )
+                      "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── SCENTED CANDLES (1 product) ── -->
+              <div
+                class="col-sm-6 col-xl-4 product-card-wrap reveal reveal-delay-1"
+                data-price="1299"
+                data-cat="Scented Candles"
+              >
+                <div class="product-card">
+                  <div class="product-img-wrap">
+                    <img src="./images/5.jpeg" alt="Vanilla Candle" />
+                    <span class="product-badge">Top Pick</span>
+                    <div class="product-actions">
+                      <a href="product.html" class="action-btn"
+                        ><i class="bi bi-eye"></i
+                      ></a>
+                      <button
+                        class="action-btn"
+                        onclick="
+                          addToCart(
+                            'p5',
+                            'Deep Premium Vanilla Scented Candle',
+                            1299,
+                            './images/5.jpeg',
+                            'Scented Candles',
+                          )
+                        "
+                      >
+                        <i class="bi bi-bag-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-body">
+                    <div class="product-cat">Scented Candles</div>
+                    <h5 class="product-title">
+                      <a href="product.html"
+                        >Deep Premium Vanilla Scented Candle</a
+                      >
+                    </h5>
+                    <div class="product-stars">★★★★★ <span>(203)</span></div>
+                    <div class="product-price">
+                      PKR 1,299 <span class="old">PKR 2,200</span>
+                    </div>
+                    <button
+                      class="btn-add-cart mt-3"
+                      onclick="
+                        addToCart(
+                          'p5',
+                          'Deep Premium Vanilla Scented Candle',
+                          1299,
+                          './images/5.jpeg',
+                          'Scented Candles',
+                        )
+                      "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /product-grid -->
+
+            <!-- Coming Soon State (shown when a coming-soon category is somehow triggered) -->
+            <div class="coming-soon-state" id="coming-soon-state">
+              <div class="coming-soon-icon">🕐</div>
+              <h3>Coming Soon</h3>
+              <p>We're working on this category. Check back soon!</p>
+            </div>
+
+            <!-- No results state -->
+            <div id="no-results">
+              <i
+                class="bi bi-search"
+                style="
+                  font-size: 48px;
+                  opacity: 0.3;
+                  display: block;
+                  margin-bottom: 12px;
+                "
+              ></i>
+              <p>No products match your filters.</p>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              class="d-flex justify-content-center mt-5"
+              id="pagination-wrap"
+            >
+              <nav>
+                <ul class="pagination gap-1">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">«</a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">»</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="footer-brand">dexo.pk</div>
+            <p class="footer-tagline">
+              Pakistan's premier destination for luxury home decor.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-pinterest"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Shop</h6>
+            <ul>
+              <li><a href="shop.html">All Products</a></li>
+              <li><a href="shop.html">Categories</a></li>
+              <li><a href="shop.html">New Arrivals</a></li>
+              <li><a href="shop.html">Best Sellers</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Help</h6>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6>Contact</h6>
+            <ul>
+              <li>
+                <a href="mailto:hello@dexo.pk"
+                  ><i class="bi bi-envelope me-2"></i>hello@dexo.pk</a
+                >
+              </li>
+              <li>
+                <a href="tel:+923001234567"
+                  ><i class="bi bi-telephone me-2"></i>+92 300 1234567</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-geo-alt me-2"></i>Karachi, Pakistan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2022 dexo.pk — All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

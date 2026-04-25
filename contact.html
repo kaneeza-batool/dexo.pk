@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — dexo.pk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">dexo<span>.pk</span></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list" style="font-size: 24px; color: var(--gold)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="login.html" class="nav-link" style="font-size: 13px"
+              >Sign In</a
+            >
+            <a href="cart.html" class="cart-icon position-relative">
+              <i class="bi bi-bag"></i>
+              <span class="cart-badge cart-count" style="display: none">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="reveal">Get In Touch</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO CARDS -->
+    <section class="section" style="padding-bottom: 40px">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="contact-card">
+              <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+              <h5 style="font-size: 18px; margin-bottom: 8px">Email Us</h5>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--text-muted);
+                  font-weight: 300;
+                  margin-bottom: 12px;
+                "
+              >
+                We reply within 24 hours
+              </p>
+              <a
+                href="mailto:hello@dexo.pk"
+                style="color: var(--gold); font-size: 14px; font-weight: 600"
+                >hello@dexo.pk</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-1">
+            <div class="contact-card">
+              <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+              <h5 style="font-size: 18px; margin-bottom: 8px">Call Us</h5>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--text-muted);
+                  font-weight: 300;
+                  margin-bottom: 12px;
+                "
+              >
+                Mon–Sat, 10am–8pm PKT
+              </p>
+              <a
+                href="tel:+923001234567"
+                style="color: var(--gold); font-size: 14px; font-weight: 600"
+                >+92 300 1234567</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-2">
+            <div class="contact-card">
+              <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+              <h5 style="font-size: 18px; margin-bottom: 8px">Visit Us</h5>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--text-muted);
+                  font-weight: 300;
+                  margin-bottom: 12px;
+                "
+              >
+                Our experience studio
+              </p>
+              <span
+                style="color: var(--gold); font-size: 14px; font-weight: 600"
+                >Clifton, Karachi, Pakistan</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM + MAP -->
+    <section class="section section-alt" style="padding-top: 40px">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Form -->
+          <div class="col-lg-6 reveal-left">
+            <div class="overline">Send a Message</div>
+            <h2 style="font-size: 36px; margin-bottom: 8px">
+              We'd Love to Hear From You
+            </h2>
+            <div class="gold-line mb-4"></div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 14px;
+                margin-bottom: 32px;
+                line-height: 1.9;
+              "
+            >
+              Whether you have a question about an order, need styling advice,
+              or want to collaborate — our team is happy to help.
+            </p>
+
+            <form id="contact-form">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Zara Ahmed"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="zara@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Phone (Optional)</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="+92 300 0000000"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Subject</label>
+                  <select class="form-select" required>
+                    <option value="">Select subject</option>
+                    <option>Order Inquiry</option>
+                    <option>Product Question</option>
+                    <option>Returns & Refunds</option>
+                    <option>Wholesale / Bulk Order</option>
+                    <option>Styling Consultation</option>
+                    <option>Collaboration</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Tell us how we can help you..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-gold">
+                    <i class="bi bi-send"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Map + Social -->
+          <div class="col-lg-6 reveal-right">
+            <div class="map-wrap mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14474.47735048!2d67.02!3d24.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sClifton%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1699000000000!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="dexo.pk location"
+              >
+              </iframe>
+            </div>
+
+            <!-- Business Hours -->
+            <div
+              style="
+                background: white;
+                border-radius: var(--radius);
+                padding: 24px;
+                border: 1px solid var(--border);
+                margin-bottom: 24px;
+              "
+            >
+              <h6
+                style="
+                  font-size: 11px;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  color: var(--gold);
+                  margin-bottom: 16px;
+                  font-weight: 700;
+                "
+              >
+                Business Hours
+              </h6>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 13px;
+                  padding: 8px 0;
+                  border-bottom: 1px solid var(--border);
+                "
+              >
+                <span>Monday – Friday</span
+                ><span style="font-weight: 600">10:00 AM – 8:00 PM</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 13px;
+                  padding: 8px 0;
+                  border-bottom: 1px solid var(--border);
+                "
+              >
+                <span>Saturday</span
+                ><span style="font-weight: 600">11:00 AM – 6:00 PM</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 13px;
+                  padding: 8px 0;
+                "
+              >
+                <span>Sunday</span
+                ><span style="color: var(--text-muted)">Closed</span>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div
+              style="
+                background: white;
+                border-radius: var(--radius);
+                padding: 24px;
+                border: 1px solid var(--border);
+              "
+            >
+              <h6
+                style="
+                  font-size: 11px;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  color: var(--gold);
+                  margin-bottom: 16px;
+                  font-weight: 700;
+                "
+              >
+                Follow Us
+              </h6>
+              <div class="d-flex flex-wrap gap-3">
+                <a
+                  href="#"
+                  class="btn-outline-gold"
+                  style="padding: 8px 18px; font-size: 12px"
+                >
+                  <i class="bi bi-instagram"></i> @dexo.pk
+                </a>
+                <a
+                  href="#"
+                  class="btn-outline-gold"
+                  style="padding: 8px 18px; font-size: 12px"
+                >
+                  <i class="bi bi-facebook"></i> dexo.pk
+                </a>
+                <a
+                  href="#"
+                  class="btn-outline-gold"
+                  style="padding: 8px 18px; font-size: 12px"
+                >
+                  <i class="bi bi-pinterest"></i> dexo.pk
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ TEASER -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="overline">Quick Answers</div>
+          <h2>Frequently Asked Questions</h2>
+          <div class="section-divider center"></div>
+        </div>
+        <div class="row g-3 justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div
+                class="accordion-item border-0 mb-3"
+                style="
+                  border-radius: var(--radius) !important;
+                  overflow: hidden;
+                  border: 1px solid var(--border) !important;
+                "
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    style="
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                      font-size: 14px;
+                      font-weight: 600;
+                      background: white;
+                      color: var(--text);
+                    "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    How long does delivery take?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      line-height: 1.9;
+                    "
+                  >
+                    Orders are typically delivered within 3–5 business days
+                    across major cities in Pakistan. Same-day delivery is
+                    available in Karachi for orders placed before 12pm.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item border-0 mb-3"
+                style="
+                  border-radius: var(--radius) !important;
+                  overflow: hidden;
+                  border: 1px solid var(--border) !important;
+                "
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    style="
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                      font-size: 14px;
+                      font-weight: 600;
+                      background: white;
+                      color: var(--text);
+                    "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    What is your return policy?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      line-height: 1.9;
+                    "
+                  >
+                    We accept returns within 7 days of delivery. Items must be
+                    in original, unused condition and packaging. Simply WhatsApp
+                    us your order ID to initiate a return.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item border-0 mb-3"
+                style="
+                  border-radius: var(--radius) !important;
+                  overflow: hidden;
+                  border: 1px solid var(--border) !important;
+                "
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    style="
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                      font-size: 14px;
+                      font-weight: 600;
+                      background: white;
+                      color: var(--text);
+                    "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Do you offer bulk / wholesale pricing?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      line-height: 1.9;
+                    "
+                  >
+                    Yes! We work with interior designers, hotels, and
+                    businesses. Contact us via the form above or email
+                    wholesale@dexo.pk for custom pricing on bulk orders.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item border-0"
+                style="
+                  border-radius: var(--radius) !important;
+                  overflow: hidden;
+                  border: 1px solid var(--border) !important;
+                "
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    style="
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                      font-size: 14px;
+                      font-weight: 600;
+                      background: white;
+                      color: var(--text);
+                    "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    Is cash on delivery available everywhere?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 300;
+                      line-height: 1.9;
+                    "
+                  >
+                    COD is available in all major cities including Karachi,
+                    Lahore, Islamabad, Rawalpindi, Faisalabad, Hyderabad,
+                    Multan, and Peshawar. For other areas, online payment is
+                    required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="footer-brand">dexo.pk</div>
+            <p class="footer-tagline">
+              Pakistan's premier destination for luxury home decor.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-pinterest"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Shop</h6>
+            <ul>
+              <li><a href="shop.html">All Products</a></li>
+              <li><a href="shop.html">Categories</a></li>
+              <li><a href="shop.html">New Arrivals</a></li>
+              <li><a href="shop.html">Best Sellers</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Help</h6>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6>Contact</h6>
+            <ul>
+              <li>
+                <a href="mailto:hello@dexo.pk"
+                  ><i class="bi bi-envelope me-2"></i>hello@dexo.pk</a
+                >
+              </li>
+              <li>
+                <a href="tel:+923001234567"
+                  ><i class="bi bi-telephone me-2"></i>+92 300 1234567</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-geo-alt me-2"></i>Karachi, Pakistan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2022 dexo.pk — All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
